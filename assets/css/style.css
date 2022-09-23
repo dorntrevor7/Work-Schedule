@@ -69,3 +69,17 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.row {
+  height: 50px;
+  margin: 25px;
+}
+
+h3 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 0;
+  height: 100%;
+  border: 1px solid black;
+}
