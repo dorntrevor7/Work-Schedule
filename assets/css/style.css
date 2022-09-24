@@ -1,6 +1,7 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'serif', sans-serif;
   font-size: 16px;
+  background-color: #00657b;
   line-height: 1;
 }
 
@@ -16,9 +17,8 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: white;
   border-radius: 0;
-  border-bottom: 10px solid black;
   padding-bottom: 20px;
 }
 
@@ -62,24 +62,27 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid black;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 10px;
   padding-right: 25px;
   padding-left: 25px;
-  background-color: #06aed5;
-  color: white;
+  background-color: lightgreen;
+  color: black;
 }
 
 .saveBtn:hover {
-  background-color: #00657b;
-  font-size: 20px;
+  background-color: white;
   transition: all 0.3s ease-in-out;
+  border-left: 2px solid black;
 
 }
 
 .row {
   height: 50px;
   margin: 25px;
+  border-top: none;
 }
 
 h3 {
@@ -88,5 +91,11 @@ h3 {
   display: flex;
   margin-bottom: 0;
   height: 100%;
-  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+input {
+  border-radius: 0;
+  border: none;
 }
