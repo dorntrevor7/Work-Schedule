@@ -19,6 +19,7 @@ textarea {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  padding-bottom: 20px;
 }
 
 .description {
@@ -58,16 +59,22 @@ textarea {
 }
 
 .saveBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
   background-color: #06aed5;
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
+  background-color: #00657b;
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+
 }
 
 .row {

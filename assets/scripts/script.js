@@ -1,4 +1,5 @@
-const $saveBtn = $(".saveButton");
+const $saveBtn = $(".saveBtn");
+const $currentDay = $("#currentDay");
 const $7input = $("#7");
 const $8input = $("#8");
 const $9input = $("#9");
@@ -10,6 +11,30 @@ const $2input = $("#2");
 const $3input = $("#3");
 const $4input = $("#4");
 const $5input = $("#5");
+const $h3 = document.querySelectorAll("h3");
+
+const runTime = () => {
+  document.getElementById("currentDay").innerHTML = moment().format(
+    "MMMM Do YYYY, h:mm:ss a"
+  );
+};
+
+setInterval(runTime, 1000);
+
+for (let i = 0; i < 11; i++) {
+  let h3Val = $h3[i].attributes[0].value;
+  if (h3Val < moment().hour()) {
+    $h3[i].setAttribute("style", "background-color: rgb(255, 72, 72);");
+    console.log("earlier");
+  } else if (h3Val > moment().hour()) {
+    $h3[i].setAttribute("style", "background-color: rgb(72, 255, 72);");
+    // $h3[i].attr("style", "background-color: green;");
+    console.log("later");
+  } else {
+    $h3[i].setAttribute("style", "background-color: lightgrey;");
+    console.log("present");
+  }
+}
 
 // get saved notes
 function getSavedNotes() {
@@ -31,17 +56,6 @@ getSavedNotes();
 // when savebtn is clicked save the notes
 $saveBtn.on("click", function (e) {
   e.preventDefault();
-  console.log($7input.val());
-  console.log($8input.val());
-  console.log($9input.val());
-  console.log($10input.val());
-  console.log($11input.val());
-  console.log($12input.val());
-  console.log($1input.val());
-  console.log($2input.val());
-  console.log($3input.val());
-  console.log($4input.val());
-  console.log($5input.val());
   localStorage.setItem("7am", $7input.val());
   localStorage.setItem("8am", $8input.val());
   localStorage.setItem("9am", $9input.val());
