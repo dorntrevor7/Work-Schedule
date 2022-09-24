@@ -99,3 +99,7 @@ input {
   border-radius: 0;
   border: none;
 }
+
+section {
+  justify-content: center;
+}
